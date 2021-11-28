@@ -20,3 +20,14 @@ nameserver 1.0.0.1
 # nameserver 2620:fe::fe:9
 # nameserver 2620:fe::9
 ```
+
+`resolv.py`
+
+```python
+import socket
+
+for _ in range(5):
+  socket.getaddrinfo('redhat.com', 80)
+```
+
+`strace -e trace=connect python3 resolv.py`
