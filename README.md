@@ -21,13 +21,13 @@ nameserver 1.0.0.1
 # nameserver 2620:fe::9
 ```
 
-`resolv.py`
-
 ```python
+cat > resolv.py << "EndOfMessage"
 import socket
 
 for _ in range(5):
   socket.getaddrinfo('google.com', 80)
-```
+EndOfMessage
 
 `strace -e trace=connect python3 resolv.py`
+```
