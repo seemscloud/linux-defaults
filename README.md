@@ -1,4 +1,5 @@
 ```bash
+cat > /etc/resolv.conf << "EndOfMessage"
 options rotate
 options timeout:1
 options attempts:2
@@ -23,6 +24,7 @@ nameserver 1.0.0.1
 nameserver 9.9.9.9
 # nameserver 2620:fe::fe:9
 # nameserver 2620:fe::9
+EndOfMessage
 ```
 
 ```python
