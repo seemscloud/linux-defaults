@@ -3,6 +3,10 @@ options rotate
 options timeout:1
 options attempts:2
 
+# Seems Local
+nameserver 10.10.100.100
+nameserver 10.10.200.200
+
 # Google
 nameserver 8.8.8.8
 nameserver 8.8.4.4
