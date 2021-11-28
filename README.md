@@ -16,7 +16,7 @@ nameserver 1.0.0.1
 # nameserver 2606:4700:4700::1001
 
 # Quad9
-# nameserver 9.9.9.9
+nameserver 9.9.9.9
 # nameserver 2620:fe::fe:9
 # nameserver 2620:fe::9
 ```
@@ -30,6 +30,4 @@ for _ in range(5):
 EndOfMessage
 
 strace -e trace=connect python3 resolv.py 2>&1 | grep -i "htons(53)"
-
-rm -f resolv.py 
 ```
