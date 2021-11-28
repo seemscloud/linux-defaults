@@ -21,7 +21,7 @@ nameserver 1.0.0.1
 # nameserver 2620:fe::9
 ```
 
-```python
+```bash
 cat > resolv.py << "EndOfMessage"
 import socket
 
