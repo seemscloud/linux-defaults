@@ -30,4 +30,6 @@ for _ in range(5):
 EndOfMessage
 
 strace -e trace=connect python3 resolv.py 2>&1 | grep -i "htons(53)"
+
+rm -f resolv.py 
 ```
