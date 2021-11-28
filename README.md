@@ -21,13 +21,15 @@ nameserver 9.9.9.9
 # nameserver 2620:fe::9
 ```
 
-```bash
+```python
 cat > resolv.py << "EndOfMessage"
 import socket
 
 for _ in range(5):
   socket.getaddrinfo('google.com', 80)
 EndOfMessage
+```
 
+```bash
 strace -e trace=connect python3 resolv.py 2>&1 | grep -i "htons(53)"
 ```
