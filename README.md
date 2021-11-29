@@ -7,8 +7,8 @@ options timeout:1
 options attempts:2
 
 # Seems Local
-nameserver 10.10.100.100
-nameserver 10.10.200.200
+nameserver 10.10.10.10
+nameserver 10.10.10.11
 
 # Google
 nameserver 8.8.8.8
